@@ -34,6 +34,10 @@
     --site-max-width:1300px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 ul{
     list-style: none;
 }
@@ -82,13 +86,6 @@ header{
     z-index: 5;
 }
 
-/* .section-content{
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: site var(--site-max-width);
-
-} */
-
 header .navbar{
     display: flex;
     padding: 20px;
@@ -111,7 +108,6 @@ header .nav-menu{
 .navbar .nav-menu .nav-link{
     color: var(--white-color);
     padding: 10px 18px;
-    /* background-color: #f3961c; */
     border-radius: var(--border-radius-m);
     font-size: var(--font-size-m);
     transition: 0.3s ease;
@@ -131,7 +127,7 @@ header .nav-menu{
     min-height: 100vh;
     margin: 0 auto;
     padding: 0 40px;
-    max-width: site var(--site-max-width);
+    max-width: var(--site-max-width);
 }
 .hero-section .section-content{
     display: flex;
@@ -229,7 +225,7 @@ header .nav-menu{
     line-height: 30px;
     margin: 50px 0 30px;
     text-align: center;
-    font-size: var(--border-radius-m);
+    font-size: var(--font-size-m);
 }
 
 .about-section .social-link-list{
@@ -303,6 +299,7 @@ header .nav-menu{
 }
 
 .testimonials-section .testimonials{
+    user-select: none;
     display: flex;
     padding: 35px;
     text-align: center;
@@ -435,6 +432,44 @@ header .nav-menu{
     background: transparent;
     color: var(--primary-color);
 }
+
+.footer-section{
+    padding: 20px 0;
+    background: var(--dark-color);
+}
+
+.footer-section .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-section :where(.copyright-text, .social-link, .policy-link){
+    color: white;
+    transition: 0.2s ease;
+}
+
+.footer-section .social-link-list{
+    display: flex;
+    gap: 25px;
+}
+
+.footer-section .social-link-list .social-link{
+    font-size: var(--font-size-l);
+}
+
+.footer-section .social-link-list .social-link:hover, 
+.footer-section .policy-text .policy-link:hover{
+    color: var(--secondary-color)
+
+}
+
+.footer-section .policy-text .separator{
+    margin: 0 5px;
+    color: var(--white-color);
+}
+
+
 
 @media screen and (max-width:1024px){
 .menu-section .menu-list{
@@ -580,5 +615,10 @@ header .nav-menu{
 
     .testimonials-section .slider-wrapper{
         display: none;
+    }
+
+    .footer-section .section-content{
+        flex-direction: column;
+        gap: 20px;
     }
 }
