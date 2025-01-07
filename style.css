@@ -13,7 +13,7 @@
     --primary-color:#3b141c;
     --secondary-color:#f3961c;
     --light-pink-color:#faf4f5;
-    --mediu-gray-color:#ccc;
+    --medium-gray-color:#ccc;
 
     --font-size-s: 0.9rem;
     --font-size-n: 1rem ;
@@ -122,6 +122,7 @@ header .nav-menu{
 .navbar :where(#menu-open-button, #menu-close-button){
     display: none;
 }
+
 .hero-section{
     background: var(--primary-color);
     min-height: 100vh;
